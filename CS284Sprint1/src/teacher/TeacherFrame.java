@@ -18,9 +18,9 @@ import javax.swing.border.EtchedBorder;
 
 public class TeacherFrame extends JFrame{
 	public JPanel panel ;
-	public JPanel p1,p10 ,p11,p12,p13,p14;
+	public JPanel p1,p10 ,p11,p12,p13,p14,p15;
 	public JPanel p2,p20,p21;
-	public JButton btLogout , btCriteria,btFillScore ,btStudentList ;
+	public JButton btLogout , btCriteria,btFillScore ,btStudentList,btExportFile ;
 	public JLabel name ,line,txt;
 	
 	public TeacherFrame() {
@@ -33,21 +33,25 @@ public class TeacherFrame extends JFrame{
 		p12 = new JPanel();
 		p13 = new JPanel();
 		p14 = new JPanel();
+		p15=new JPanel();
 		
 		btLogout = new JButton("ออกจากระบบ");
 		btCriteria = new JButton("กรอกสัดส่วนคะแนน");
 		btFillScore = new JButton("กรอกคะแนน");
 		btStudentList = new JButton("รายชื่อนักษา");
+		btExportFile=new JButton("ขอใบส่งเกรด");
 		
 		btLogout.setFont(new Font("Angsana New", Font.PLAIN, 20));
 		btCriteria.setFont(new Font("Angsana New", Font.PLAIN, 20));
 		btFillScore.setFont(new Font("Angsana New", Font.PLAIN, 20));
 		btStudentList.setFont(new Font("Angsana New", Font.PLAIN, 20));
+		btExportFile.setFont(new Font("Angsana New", Font.PLAIN, 20));
 		
 		btLogout.setPreferredSize(new Dimension(150, 30));
 		btCriteria.setPreferredSize(new Dimension(150, 30));
 		btFillScore.setPreferredSize(new Dimension(150, 30));
 		btStudentList.setPreferredSize(new Dimension(150, 30));
+		btExportFile.setPreferredSize(new Dimension(150, 30));
 		
 		/*btCriteria.addActionListener(new ActionListener() {
 			
@@ -60,24 +64,26 @@ public class TeacherFrame extends JFrame{
 		
 		
 		
-		btFillScore.addActionListener(new ActionListener() {
+		/*btFillScore.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				new FillFrame();
 			}
-		});
+		});*/
 		
 		p11.add(btLogout);
 		p12.add(btCriteria);
 		p13.add(btFillScore);
 		p14.add(btStudentList);
+		p15.add(btExportFile);
 		
 		p10.add(p11);
 		p10.add(p12);
 		p10.add(p13);
 		p10.add(p14);
+		p10.add(p15);
 		p1 = new JPanel();
 		p1.setBorder(new EtchedBorder());
 		p1.add(p10);

@@ -21,7 +21,7 @@ public class ExamCriteria {
 	}
 
 	private String subName;// ชื่อวิชา
-	private int numOfScore;// คะแนนที่ได้
+	private int numOfScore = 0;// คะแนนที่ได้
 	private ArrayList<Exam> scoreRate;// เก็บจำนวนสัดส่วนของวิชานั้นๆ เช่น
 										// midterm final quize1
 
@@ -95,6 +95,9 @@ public class ExamCriteria {
 
 	public String getTypeAt(int index) {
 		return scoreRate.get(index).type;
+	}
+	public int size(){
+		return scoreRate.size();
 	}
 
 	public boolean CheckMidAndFinal() {

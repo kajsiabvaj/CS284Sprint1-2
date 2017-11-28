@@ -10,7 +10,7 @@ import classModel.ClassList;
 import classModel.ExamCriteria;
 import classModel.Subject;
 
-public class TeatCalculateNetScore {
+public class TestCalculateNetScore {
 
 	@Test
 	public void testCheckHaveScore() {
@@ -21,7 +21,7 @@ public class TeatCalculateNetScore {
 		st.getList().getStudentAt(0).addSubject("CS284");
 		st.getList().getStudentAt(0).addScore("CS284", "final", 20, false, "-");
 
-		assertTrue("", st.getList().getStudentAt(0).getScoreAt(0) == 20);
+		assertTrue("Test have score in system", st.getList().getStudentAt(0).getScoreAt(0) == 20);
 	}
 
 	@Test
@@ -52,7 +52,6 @@ public class TeatCalculateNetScore {
 		st.getList().getStudentAt(0).addSubject("CS284");
 		st.getList().getStudentAt(0).addScore("CS284", "final", 50, false, "-");
 		st.setExt(ex);
-		System.out.println("net score = " + st.calculateNetScore("" + st.getList().getStudentAt(0).getScoreAt(0), 0));
 		assertTrue("", st.calculateNetScore("" + st.getList().getStudentAt(0).getScoreAt(0), 0) <= ex.getRateAt(0));
 		ex = null;
 		st = null;

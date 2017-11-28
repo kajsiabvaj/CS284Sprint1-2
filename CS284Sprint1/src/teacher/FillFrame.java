@@ -58,7 +58,7 @@ public class FillFrame extends JFrame {
 		panel.add(p3);
 		
 		p4 = new JPanel();
-		cancel = new JButton("cancel");
+		cancel = new JButton("Cancel");
 		cancel.addActionListener(new ActionListener() {
 			
 			@Override
@@ -67,15 +67,15 @@ public class FillFrame extends JFrame {
 				
 			}
 		});
-		fillScore = new JButton("fill score");
-		fillScore.addActionListener(new ActionListener() {
+		fillScore = new JButton("Fill score");
+		/*fillScore.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				new ScoreFrame();
 			}
-		});
+		});*/
 		
 		
 		

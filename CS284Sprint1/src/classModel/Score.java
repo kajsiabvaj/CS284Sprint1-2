@@ -17,11 +17,13 @@ public class Score {
 		note=n;
 		score=sco;
 	}
-	public Score(String sub,String typ,boolean mt,String n){
+	public Score(String sub,String typ,double sco,double netSco,boolean mt,String n){
 		subName=sub;
 		type=typ;
 		missTest=mt;
 		note=n;
+		score=sco;
+		netScore=netSco;
 	}
 	public String getSubName() {
 		return subName;

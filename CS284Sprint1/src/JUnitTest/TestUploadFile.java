@@ -77,4 +77,20 @@ public class TestUploadFile {
 		assertTrue("can import null file", sj.importFile(new File("noxlsx.docx")) == false);
 		sj = null;
 	}
+	
+	@Test
+	public void testUploadFilewithXls() {
+		JOptionPane.showMessageDialog(null, "Test upload file and with .xls");
+		Subject sj = new Subject("CS284", "");
+		sj.importFile(new File("xls.xls"));
+		ClassList cl = sj.getList();
+		String name1 = "†π“¬∞‘µ‘°√ °¡≈æ√√≥æ√";
+		String name2 = "†π“¬≥—∞æß…Ï  «— ¥‘Ï√—°…“";
+		assertTrue("can not get data from read file", cl.getStudentAt(0).getId().trim().equals("5909610031"));
+		assertTrue("can not get data from read file", cl.getStudentAt(0).getName().trim().equals(name1.trim()));
+		assertTrue("can not get data from read file", cl.getStudentAt(36).getId().trim().equals("5909680125"));
+		assertTrue("can not get data from read file", cl.getStudentAt(36).getName().trim().equals(name2.trim()));
+		cl = null;
+		sj = null;
+	}
 }

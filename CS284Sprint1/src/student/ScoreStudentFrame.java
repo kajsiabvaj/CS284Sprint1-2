@@ -24,6 +24,7 @@ public class ScoreStudentFrame extends JFrame{
 	private String typeName;
 	public JLabel subjectNameLabel;
 	public JTable table;
+	public String header[] = {"เลขทะเบียน", "คะแนนดิบ","คะแนนสุทธิ" };
 	
 	public ScoreStudentFrame(Student student, String subjectName, String typeName) {
 		this.student = student;
@@ -46,7 +47,7 @@ public class ScoreStudentFrame extends JFrame{
 //		String data[][] = new String[จำนวนนักเรียน/นักเรียนคนที่ login เข้ามา][4];
 		
 		
-		String header[] = {"เลขทะเบียน", "คะแนนดิบ","คะแนนสุทธิ" };
+		
 		table = new JTable(data,header);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		table.getColumnModel().getColumn(0).setPreferredWidth(300);
